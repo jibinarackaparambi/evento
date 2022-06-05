@@ -7,10 +7,10 @@
             <div class="container">
                 <div class="head-section">
                     <span class="logo">Evento</span>
-                    <a href="#" class="btn btn-item "> Sign In</a>
-                    <a href="#" class="btn btn-item "> Sign up</a>
+                    <a href="#" class="btn btn-item "> Login</a>
+                    <a href="#" class="btn btn-item "> Signup</a>
                 </div>
-                <div style="margin-top: 28%;font-size: 26px;font-weight: 600;">Sign In</div>
+                <div style="margin-top: 16%;font-size: 26px;font-weight: 600;">Sign In</div>
                 <span style="font-size: 16px;font-weight: 400;color: gray;line-height: 1.6;">Sign in to continue to our site.</span>
                 <form method="post" novalidate style="margin-top:4%;">
                     {% csrf_token %}
@@ -24,16 +24,11 @@
                   
                     </div>
                     {% endfor %} 
-                    <input type="submit" value="Sign In" class='btn btn-success' style='width:100%; margin:auto; display:block'>
+                    <input type="submit" value="Login" class='btn btn-success' style='width:100%; margin:auto; display:block'>
                 </form>
             </div>
         </div>
         <div class="col-5" style="background-color:#788;height: calc(100vh - 132px);">
-            <div class="center">
-                <span style="font-size: 32px;font-weight: 600;color: white;">Welcome to Evento</span><br>
-                <span style="font-size: 16px;font-weight: 400;color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula nunc suscipit dui placerat, in.</span>
-            </div>
-            
         </div>
     </div>
 </div>
