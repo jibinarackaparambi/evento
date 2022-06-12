@@ -25,7 +25,10 @@
                     </div>
                     {% endfor %} 
                     <input type="submit" value="Sign In" class='btn btn-success' style='width:100%; margin:auto; display:block'>
-                </form>
+                </form><br>
+                {% if form.errors %}
+                <div class="alert alert-danger"  role="alert">Your username and password didn't match. Please try again.</div>
+                {% endif %}
             </div>
         </div>
         <div class="col-5" style="background-color:#788;height: calc(100vh - 132px);">
