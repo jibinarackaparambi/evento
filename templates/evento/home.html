@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block 'body' %}
+{% load widget_tweaks %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Evento</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Find Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Create event</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+</nav>
+<div class="search-header">
+    <div class="search-landing-header-container">
+        <div class="search-image-container"> 
+            <img width="400" height="236" alt="Find designers and inspiration on Dribbble" class="search-image " src="https://cdn.dribbble.com/assets/searches/search-header-800-1f49142870a5c1428edf0f570465ce9114ca4dc76f9d645bcf5c786a18dc697f.png">
+        </div>
+    </div>
+    <div class="search-landing-image-text">
+        <h1 class="search-landing-heading">Search Dribbble</h1>
+        <p class="search-landing-heading-text">
+        18,400,000+
+        images from thousands of inspirational designers
+        </p>
+    </div>
+    <div  class="search-box">
+        <input type="text" class="form-control" id="txtSearch" name="txtSearch">    
+    </div>
+</div>
+
+
+
+<script>
+    $( function() {  
+      $( "#txtSearch" ).autocomplete({
+        source: "{% url 'search' %}"
+      });
+    } );
+</script>  
+   
+{% endblock%}

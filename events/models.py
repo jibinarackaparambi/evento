@@ -1,4 +1,4 @@
-from unicodedata import name
+
 from django.db import models
 
 # Create your models here.
@@ -10,3 +10,4 @@ class Event(models.Model):
     time = models.TimeField()
     created = models.DateTimeField(auto_now_add=True)
     price = models.FloatField(default=0.0)
+    img = models.ImageField(blank=True,null=True)
