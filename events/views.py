@@ -1,5 +1,6 @@
 import json
 from .models import Event
+from .forms import EventForm
 
 from django.views.generic import ListView
 from django.shortcuts import render,HttpResponse
@@ -21,8 +22,7 @@ class EventSerchView(ListView):
 
 
 class HomeView(ListView):
-
-    def get_queryset(self):
-        return Event.objects.all()
-
+    model = Event
     template_name = 'evento/home.html'
+    context_object_name = 'events'
+    # form_class = EventForm

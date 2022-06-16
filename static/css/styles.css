@@ -22,38 +22,38 @@
     top: 50%;
     text-align: center;
 }
-.search-header{
+
+.header{
     position: relative;
-}
-.search-image-container{
-    display: flex;
-    justify-content: center;
     background-color: #fd507e;
-}
-.search-landing-image-text {
-    position: absolute;
-    top: 25%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: white;
+    height: 236px;
 }
 
+.search-image-container{
+    background-image: url('https://cdn.dribbble.com/assets/searches/search-header-800-1f49142870a5c1428edf0f570465ce9114ca4dc76f9d645bcf5c786a18dc697f.png');
+    height: 236px;
+    background-repeat: no-repeat;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    height: 236px;
+    justify-content: center;
+}
 .search-landing-heading{
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 700;
     line-height: 56px;
 }
-
-.search-landing-heading-text    {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 32px;
+.search-box input {
+    width: 620px;
 }
 
-.search-box {
+.card img{
+    object-fit: cover;
     width: 100%;
-    max-width: 628px;
-    margin: 0 auto;
+    height: 236px;
 }

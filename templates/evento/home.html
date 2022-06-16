@@ -23,24 +23,39 @@
       </div>
     </div>
 </nav>
-<div class="search-header">
-    <div class="search-landing-header-container">
-        <div class="search-image-container"> 
-            <img width="400" height="236" alt="Find designers and inspiration on Dribbble" class="search-image " src="https://cdn.dribbble.com/assets/searches/search-header-800-1f49142870a5c1428edf0f570465ce9114ca4dc76f9d645bcf5c786a18dc697f.png">
+<div class="header">
+  <div class="search-image-container">
+      <div class="content">
+        <div class="search-landing-heading">WELCOME TO EVANTO</div>
+        <div  class="search-box">
+          <input type="text" class="form-control" id="txtSearch" name="txtSearch">    
         </div>
-    </div>
-    <div class="search-landing-image-text">
-        <h1 class="search-landing-heading">Search Dribbble</h1>
-        <p class="search-landing-heading-text">
-        18,400,000+
-        images from thousands of inspirational designers
-        </p>
-    </div>
-    <div  class="search-box">
-        <input type="text" class="form-control" id="txtSearch" name="txtSearch">    
-    </div>
+      </div>
+  </div>
 </div>
-
+<div class="container">
+  <div class="row">
+    {% for event in events %} 
+    
+    <div class="col-4">
+      <div class="card" style="width: 100%; margin-bottom: 22px;">
+        <img src="{{event.img.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="text-transform: uppercase;">{{event.name}}</h5>
+          <div>
+            <div style="display:inline-block;">{{event.location_name}}</div>
+            <div style="display:inline-block; float:right;">{{event.date|date:"jS M Y"}}</div>
+          </div>
+          <div>
+            <div style="display:inline-block;">{{event.price}}$</div>
+            <div style="display:inline-block; float:right;">{{event.time}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 
 
 <script>
